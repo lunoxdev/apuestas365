@@ -10,24 +10,23 @@ const Carousel = () => {
   );
 
   const settings = {
-    dots: true,
     centerMode: true,
-    centerPadding: "120px",
+    centerPadding: "60px",
     slidesToShow: 2,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 766,
+        breakpoint: 600,
         settings: {
           arrows: true,
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
       {
-        breakpoint: 412,
+        breakpoint: 480,
         settings: {
           arrows: true,
           centerMode: true,
