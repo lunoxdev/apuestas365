@@ -6,6 +6,7 @@ import { sportsbooks } from "./Data";
 export default function List() {
   const [numToShow, setNumToShow] = useState(4);
   const [sortType, setSortType] = useState("name-first");
+  const [country, setCountry] = useState("");
 
   function handleLoadMore() {
     setNumToShow(numToShow + 4);
@@ -26,25 +27,54 @@ export default function List() {
     });
   }
 
-  const sortedSportsbooks = sortSportsbooks(sportsbooks, sortType);
+  const filterByCountry = (sportsbooks) => {
+    if (country !== "") {
+      return sportsbooks.filter((sportsbook) =>
+        sportsbook.countries.includes(country)
+      );
+    }
+    return sportsbooks;
+  };
+
+  const sortedSportsbooks = sortSportsbooks(
+    filterByCountry(sportsbooks),
+    sortType
+  );
+
   const allShown = numToShow >= sortedSportsbooks.length;
 
   return (
     <div>
       <div className="flex mt-5 mb-5 p-4 gap-5">
         <div className="text-white flex-1">
-          <header className="flex justify-between items-center bg-gray-800 p-4 rounded-lg mb-5 ">
-            <div className="flex items-center">
-              <span className="text-white mr-2">Ordenar por:</span>
-              <select
-                className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1"
-                value={sortType}
-                onChange={(event) => setSortType(event.target.value)}
-              >
-                <option value="name-first">Letra inicial</option>
-                <option value="name-last">Letra final</option>
-                <option value="stars">Clasificación</option>
-              </select>
+          <header className="bg-gray-800 p-4 rounded-lg mb-5">
+            <div className="flex flex-col sm:flex-row justify-start items-start">
+              <div className="flex items-center mb-3 sm:mb-0">
+                <span className="text-white mr-2">Ordenar por:</span>
+                <select
+                  className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1 mr-5"
+                  value={sortType}
+                  onChange={(event) => setSortType(event.target.value)}
+                >
+                  <option value="name-first">Letra inicial</option>
+                  <option value="name-last">Letra final</option>
+                  <option value="stars">Clasificación</option>
+                </select>
+              </div>
+              <div className="flex items-center">
+                <span className="text-white">País:</span>
+                <select
+                  className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1"
+                  value={country}
+                  onChange={(event) => setCountry(event.target.value)}
+                >
+                  <option value="">Todos</option>
+                  <option value="Costa Rica">Costa Rica</option>
+                  <option value="Panamá">Panamá</option>
+                  <option value="Ecuador">Ecuador</option>
+                  <option value="Colombia">Colombia</option>
+                </select>
+              </div>
             </div>
           </header>
 

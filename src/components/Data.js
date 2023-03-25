@@ -10,6 +10,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 0,
     stars: 5,
+    countries: ["Costa Rica", "Panamá", "Ecuador"],
   },
   {
     id: 1,
@@ -20,6 +21,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 0,
     stars: 1,
+    countries: ["Costa Rica", "Ecuador"],
   },
   {
     id: 2,
@@ -30,6 +32,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 1,
     stars: 4,
+    countries: ["Costa Rica"],
   },
   {
     id: 3,
@@ -40,6 +43,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 0,
     stars: 2,
+    countries: ["Panamá"],
   },
   {
     id: 4,
@@ -50,6 +54,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 1,
     stars: 4,
+    countries: ["Costa Rica", "Colombia"],
   },
   {
     id: 5,
@@ -60,6 +65,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 1,
     stars: 5,
+    countries: ["Ecuador"],
   },
   {
     id: 6,
@@ -70,6 +76,7 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 1,
     stars: 1,
+    countries: ["Costa Rica", "Panamá"],
   },
   {
     id: 7,
@@ -80,5 +87,6 @@ export const sportsbooks = [
       "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed quis mauris ac tortor aliquet vehicula.",
     popular: 0,
     stars: 3,
+    countries: ["Costa Rica", "Panamá", "Ecuador", "Colombia"],
   },
 ];
