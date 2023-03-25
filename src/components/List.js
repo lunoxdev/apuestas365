@@ -45,7 +45,7 @@ export default function List() {
 
   return (
     <div>
-      <div className="flex mt-5 mb-5 p-4 gap-5">
+      <div className="flex mt-5 mb-5 p-7 gap-5">
         <div className="text-white flex-1">
           <header className="bg-gray-800 p-4 rounded-lg mb-5">
             <div className="flex flex-col sm:flex-row justify-start items-start">
@@ -62,7 +62,7 @@ export default function List() {
                 </select>
               </div>
               <div className="flex items-center">
-                <span className="text-white">País:</span>
+                <span className="text-white mr-2">País:</span>
                 <select
                   className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1"
                   value={country}
@@ -78,7 +78,7 @@ export default function List() {
             </div>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5">
             {sortedSportsbooks.slice(0, numToShow).map((sportsbook) => (
               <div key={sportsbook.id}>
                 <Card sportsbook={sportsbook} />

@@ -11,6 +11,7 @@ export const sportsbooks = [
     popular: 0,
     stars: 5,
     countries: ["Costa Rica", "Panamá", "Ecuador"],
+    top: 1,
   },
   {
     id: 1,
@@ -22,6 +23,7 @@ export const sportsbooks = [
     popular: 0,
     stars: 1,
     countries: ["Costa Rica", "Ecuador"],
+    top: 1,
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ export const sportsbooks = [
     popular: 0,
     stars: 2,
     countries: ["Panamá"],
+    top: 1,
   },
   {
     id: 4,
@@ -66,6 +69,7 @@ export const sportsbooks = [
     popular: 1,
     stars: 5,
     countries: ["Ecuador"],
+    top: 1,
   },
   {
     id: 6,
