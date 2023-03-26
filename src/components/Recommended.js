@@ -43,7 +43,7 @@ const Recommended = () => {
         <h1 class="text-center text-white text-3xl md:text-3xl lg:text-4xl p-2">
           Top 4 mejores casas de apuestas deportivas recomendadas por expertos
         </h1>
-        <h2 class="text-center text-white mt-5">
+        <h2 class="text-center text-gray-400 mt-5">
           This is the content of the card. Lorem ipsum dolor sit amet
           consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis.
           Pellentesque habitant morbi tristique senectus et netus et malesuada
