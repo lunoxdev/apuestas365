@@ -47,12 +47,12 @@ export default function List() {
     <div>
       <div className="flex mt-5 mb-5 p-7 gap-5">
         <div className="text-white flex-1">
-          <header className="bg-gray-800 p-4 rounded-lg mb-5">
-            <div className="flex flex-col sm:flex-row justify-start items-start">
-              <div className="flex items-center mb-3 sm:mb-0">
-                <span className="text-white mr-2">Ordenar por:</span>
+          <header className="bg-gray-800 p-3 rounded-lg mb-5">
+            <div className="flex sm:flex-row divide-x justify-start items-start">
+              <div className="flex flex-col gap-2">
+                <span className="text-white text-xs ml-1">Ordenar por:</span>
                 <select
-                  className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1 mr-5"
+                  className="text-white text-xs bg-gray-800 rounded-md border-gray-600 border-2 p-1 mr-5"
                   value={sortType}
                   onChange={(event) => setSortType(event.target.value)}
                 >
@@ -61,10 +61,12 @@ export default function List() {
                   <option value="stars">Clasificación</option>
                 </select>
               </div>
-              <div className="flex items-center">
-                <span className="text-white mr-2">País:</span>
+              <div className="flex flex-col gap-2 items-center">
+                <span className="text-white text-xs ml-5">
+                  Selecciona el país:
+                </span>
                 <select
-                  className="text-white bg-gray-800 rounded-md border-gray-600 border-2 p-1"
+                  className="text-white text-xs ml-5 bg-gray-800 rounded-md border-gray-600 border-2 p-1 px-2"
                   value={country}
                   onChange={(event) => setCountry(event.target.value)}
                 >

@@ -3,8 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { sportsbooks } from "./Data";
+import "../index.css"; // importar el archivo de estilos aquí
 
-const Carousel = () => {
+const Recommended = () => {
   const topSportsbooks = sportsbooks.filter(
     (sportsbook) => sportsbook.top === 1
   );
@@ -19,7 +20,6 @@ const Carousel = () => {
       {
         breakpoint: 600,
         settings: {
-          arrows: true,
           centerMode: true,
           centerPadding: "40px",
           slidesToShow: 1,
@@ -28,9 +28,9 @@ const Carousel = () => {
       {
         breakpoint: 480,
         settings: {
-          arrows: true,
+          arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "50px",
           slidesToShow: 1,
         },
       },
@@ -80,4 +80,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Recommended;
