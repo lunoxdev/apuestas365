@@ -97,7 +97,7 @@ function Considerations() {
                   <img
                     src={item.img}
                     alt="Banner"
-                    className="w-32 h-32 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg"
+                    className="w-40 h-32 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg"
                   />
                 </div>
                 <div className="md:ml-5 text-start">

@@ -51,7 +51,7 @@ const Recommended = () => {
         </h2>
       </div>
 
-      <div class="max-w-4xl mx-auto px-14 mb-10">
+      <div className="max-w-4xl mx-auto px-14 mb-10">
         <Slider {...settings}>
           {topSportsbooks.map((sportsbook) => (
             <div key={sportsbook.popular} className="px-3">
