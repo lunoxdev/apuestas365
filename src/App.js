@@ -1,6 +1,7 @@
 import "./App.css";
 import Considerations from "./components/Considerations";
 import Faq from "./components/Faq";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import List from "./components/List";
 import Promotions from "./components/Promotions";
@@ -15,6 +16,7 @@ function App() {
       <Considerations />
       <Promotions />
       <Faq />
+      <Footer />
     </div>
   );
 }

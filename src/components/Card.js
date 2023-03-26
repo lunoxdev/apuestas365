@@ -38,7 +38,7 @@ function Card({ sportsbook }) {
                 </div>
               </div>
               <div className="mb-5 flex justify-start md:justify-end lg:justify-end">
-                <button className="rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-900 w-32 h-12 lg:w-20">
+                <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-32 h-12 lg:w-20">
                   JUGAR
                 </button>
               </div>

@@ -51,7 +51,7 @@ const Recommended = () => {
         </h2>
       </div>
 
-      <div className="max-w-4xl mx-auto px-14 mb-10">
+      <div className="max-w-4xl mx-auto px-14 md:px-32 mb-10">
         <Slider {...settings}>
           {topSportsbooks.map((sportsbook) => (
             <div key={sportsbook.popular} className="px-3">
@@ -66,7 +66,7 @@ const Recommended = () => {
                 </h2>
 
                 <div className="mb-2 flex justify-center p-4">
-                  <button className="rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-900 w-full h-12">
+                  <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-full h-12">
                     JUGAR
                   </button>
                 </div>

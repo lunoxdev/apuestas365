@@ -43,7 +43,7 @@ function SimpleAccordion() {
           Preguntas frecuentes acerca de las casas de apuestas deportivas
         </h1>
       </div>
-      <div className="max-w-4xl mx-auto px-14 mb-10">
+      <div className="max-w-4xl mx-auto px-14 mb-16">
         {items.map((item, index) => (
           <div key={index}>
             <button
@@ -52,7 +52,7 @@ function SimpleAccordion() {
                 setSelectedIndex(index === selectedIndex ? null : index)
               }
             >
-              <span className="font-medium text-base text-white">
+              <span className="font-medium text-base text-white hover:text-zinc-400">
                 {item.title}
               </span>
               <svg

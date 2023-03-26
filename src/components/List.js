@@ -52,7 +52,7 @@ export default function List() {
               <div className="flex flex-col gap-2">
                 <span className="text-white text-xs ml-1">Ordenar por:</span>
                 <select
-                  className="text-white text-xs bg-gray-800 rounded-md border-gray-600 border-2 p-1 mr-5"
+                  className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 p-1 mr-5"
                   value={sortType}
                   onChange={(event) => setSortType(event.target.value)}
                 >
@@ -66,7 +66,7 @@ export default function List() {
                   Selecciona el país:
                 </span>
                 <select
-                  className="text-white text-xs ml-5 bg-gray-800 rounded-md border-gray-600 border-2 p-1 px-2"
+                  className="text-white text-xs ml-5 bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 p-1 px-2"
                   value={country}
                   onChange={(event) => setCountry(event.target.value)}
                 >
@@ -92,7 +92,7 @@ export default function List() {
             <div className="flex justify-center items-center mt-5">
               <button
                 type="button"
-                className="text-blue-600 underline cursor-pointer"
+                className="text-blue-600 hover:text-zinc-300 underline cursor-pointer"
                 onClick={handleLoadMore}
               >
                 Cargar más

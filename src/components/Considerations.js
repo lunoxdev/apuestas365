@@ -111,7 +111,7 @@ function Considerations() {
                         <p>{item.desc}</p>
                         {showMore === item.id && (
                           <button
-                            className="text-blue-500 underline mt-2"
+                            className="text-blue-500 hover:text-zinc-300 underline mt-2"
                             onClick={() => setShowMore(null)}
                           >
                             Conocer menos
@@ -123,7 +123,7 @@ function Considerations() {
                         <p>{item.desc.substr(0, 50)}</p>
                         {item.desc.length > 50 && (
                           <button
-                            className="text-blue-500 underline mt-2"
+                            className="text-blue-500 hover:text-zinc-300 underline mt-2"
                             onClick={() => setShowMore(item.id)}
                           >
                             Conocer más
