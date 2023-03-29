@@ -38,8 +38,8 @@ function SimpleAccordion() {
 
   return (
     <div>
-      <div class="grid items-center justify-center mt-5 mb-5 p-7">
-        <h1 class="text-center mb-3 text-white text-3xl md:text-3xl lg:text-4xl p-2">
+      <div class="grid items-center justify-center mt-5 p-7">
+        <h1 class="text-center text-white text-2xl md:text-3xl p-2">
           Preguntas frecuentes acerca de las casas de apuestas deportivas
         </h1>
       </div>
@@ -52,7 +52,7 @@ function SimpleAccordion() {
                 setSelectedIndex(index === selectedIndex ? null : index)
               }
             >
-              <span className="font-medium text-base text-white hover:text-zinc-400">
+              <span className="font-medium text-sm text-white hover:text-zinc-400">
                 {item.title}
               </span>
               <svg
@@ -71,7 +71,7 @@ function SimpleAccordion() {
               </svg>
             </button>
             {selectedIndex === index && (
-              <div className="px-8 py-4 text-sm md:text-base bg-black rounded-b-md text-gray-400">
+              <div className="px-8 py-4 text-xs md:text-xs bg-black rounded-b-md text-gray-400">
                 <p>{item.content}</p>
               </div>
             )}

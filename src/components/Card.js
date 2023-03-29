@@ -18,14 +18,14 @@ function Card({ sportsbook }) {
           <div className="flex justify-between p-3 ">
             <div className=" grid md:grid-cols-2 lg:grid lg:grid-cols-2 justify-center items-center">
               <div className="mt-4 ">
-                <h2 className=" text-xl text-white font-bold">
+                <h2 className=" text-base text-white font-bold">
                   {sportsbook.name}
                 </h2>
                 <div className="flex mt-2 ">
                   {Array.from({ length: 5 }, (_, i) => (
                     <svg
                       key={i}
-                      className={`w-5 h-5 mb-3  ${
+                      className={`w-4 h-4 mb-3  ${
                         i < sportsbook.stars
                           ? "text-yellow-400"
                           : "text-gray-300"
@@ -38,7 +38,7 @@ function Card({ sportsbook }) {
                 </div>
               </div>
               <div className="mb-5 flex justify-start md:justify-end lg:justify-end">
-                <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-32 h-12 lg:w-20">
+                <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-32 h-12 md:w-30 md:h-10 md:mt-5 lg:w-30 lg:h-10 lg:mt-5">
                   JUGAR
                 </button>
               </div>
@@ -48,16 +48,14 @@ function Card({ sportsbook }) {
         {/* Description */}
         <div className="p-4">
           {showDescription ? (
-            <p className="text-gray-400 text-sm md:text-base">
-              {sportsbook.description}
-            </p>
+            <p className="text-gray-400 text-xs">{sportsbook.description}</p>
           ) : (
-            <p className="text-gray-400 text-sm md:text-base truncate">
+            <p className="text-gray-400 text-xs truncate">
               {sportsbook.description}
             </p>
           )}
           <button
-            className="text-blue-600 text-sm font-bold"
+            className="text-blue-600 text-xs font-bold"
             onClick={() => setShowDescription(!showDescription)}
           >
             {showDescription ? "Ver menos información" : "Ver más información"}

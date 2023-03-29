@@ -40,10 +40,10 @@ const Recommended = () => {
   return (
     <div>
       <div class="grid items-center justify-center mt-5 mb-5 p-5">
-        <h1 class="text-center text-white text-3xl md:text-3xl lg:text-4xl p-2">
+        <h1 class="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
           Top 4 mejores casas de apuestas deportivas recomendadas por expertos
         </h1>
-        <h2 class="text-center text-gray-400 mt-5">
+        <h2 class="text-center text-xs text-gray-400 mt-5">
           This is the content of the card. Lorem ipsum dolor sit amet
           consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis.
           Pellentesque habitant morbi tristique senectus et netus et malesuada

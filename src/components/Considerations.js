@@ -65,7 +65,7 @@ function Considerations() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 1000 && window.innerHeight >= 700);
+      setIsDesktop(window.innerWidth >= 800 && window.innerHeight >= 600);
     };
 
     handleResize(); // set initial state based on window width
@@ -77,17 +77,17 @@ function Considerations() {
   return (
     <>
       <div class="grid items-center justify-center mt-5 mb-5 p-7">
-        <h1 class="text-center text-white text-3xl md:text-3xl lg:text-4xl p-2">
+        <h1 class="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
           ¿Qué debo considerar antes de elegir una casa de apuestas?{" "}
         </h1>
-        <h2 class="text-center text-gray-400 mt-5">
+        <h2 class="text-center text-gray-400 text-xs mt-5">
           This is the content of the card. Lorem ipsum dolor sit amet
           consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis.
           Pellentesque habitant morbi tristique senectus et netus et malesuada
           famr aliquet vehicula.
         </h2>
         <div className="grid md:p-10 mt-10">
-          <ul className="grid grid-cols-2 mt-5 gap-5">
+          <ul className="grid grid-cols-2 gap-5">
             {items.map((item) => (
               <li
                 key={item.id}
@@ -101,17 +101,17 @@ function Considerations() {
                   />
                 </div>
                 <div className="md:ml-5 text-start">
-                  <h2 className="text-white text-xl font-semibold mb-2 mt-4">
+                  <h2 className="text-white text-sm font-semibold mb-2 mt-4">
                     {item.title}
                   </h2>
 
-                  <div className="text-gray-600 text-base">
+                  <div className="text-gray-600 text-xs">
                     {showMore === item.id || isDesktop ? (
                       <>
                         <p>{item.desc}</p>
                         {showMore === item.id && (
                           <button
-                            className="text-blue-500 hover:text-zinc-300 underline mt-2"
+                            className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
                             onClick={() => setShowMore(null)}
                           >
                             Conocer menos
@@ -123,7 +123,7 @@ function Considerations() {
                         <p>{item.desc.substr(0, 50)}</p>
                         {item.desc.length > 50 && (
                           <button
-                            className="text-blue-500 hover:text-zinc-300 underline mt-2"
+                            className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
                             onClick={() => setShowMore(item.id)}
                           >
                             Conocer más
