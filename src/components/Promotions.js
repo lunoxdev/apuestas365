@@ -5,7 +5,7 @@ export default function Promotions() {
     <div>
       <div class="grid items-center justify-center mt-5 mb-5 p-7">
         <h1 class="text-center mb-3 text-white text-2xl md:text-3xl lg:text-3xl p-2">
-          Promociones, bonos de bienvenida y más
+          Ofertas y promociones exclusivas en apuestas deportivas
         </h1>
         <div className="flex flex-wrap p-5 md:p-10">
           <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
@@ -13,12 +13,12 @@ export default function Promotions() {
               <h2 className="text-white text-base font-semibold mb-3">
                 Bonos de Bienvenida
               </h2>
-              <p className="text-gray-600 text-xs mb-10">
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+              <p className="text-gray-600 text-xs mb-7">
+                Recompensa que ofrecen las casas de apuestas deportivas a los
+                nuevos usuarios que se registran en la plataforma. Estos bonos
+                pueden ser en forma de apuestas gratis, dinero en efectivo o
+                giros gratis. ¡Aprovecha los bonos de bienvenida para aumentar
+                tus posibilidades de ganar en tus apuestas deportivas favoritas!
               </p>
             </div>
             <div className="mb-1">
@@ -26,11 +26,15 @@ export default function Promotions() {
                 Rollover
               </h2>
               <p className="text-gray-600 text-xs ">
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+                El Rollover es un requisito que debes cumplir para poder retirar
+                las ganancias obtenidas con los bonos de bienvenida u otras
+                promociones. Este requisito implica apostar una determinada
+                cantidad de veces el valor del bono o la promoción antes de
+                poder solicitar un retiro. Por ejemplo, si recibes un bono de
+                $100 con un Rollover de 5x, deberás apostar un total de $500
+                antes de poder retirar las ganancias. Es importante revisar los
+                términos y condiciones de cada promoción para entender cuál es
+                el Rollover necesario y cómo cumplir con él de manera efectiva.
               </p>
             </div>
           </div>
@@ -39,12 +43,12 @@ export default function Promotions() {
               <h2 className="text-white text-base font-semibold mb-3">
                 Jugadas gratis
               </h2>
-              <p className="text-gray-600 mb-10 text-xs ">
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+              <p className="text-gray-600 mb-7 text-xs ">
+                Oferta que ofrecen algunas casas de apuestas deportivas para que
+                los usuarios prueben algunos de los juegos o deportes
+                disponibles en la plataforma sin tener que hacer una apuesta con
+                dinero real. ¡Aprovecha las jugadas gratis para conocer mejor la
+                plataforma y afinar tus estrategias de apuestas!
               </p>
             </div>
             <div className="mb-1">
@@ -52,11 +56,12 @@ export default function Promotions() {
                 Promociones Arena
               </h2>
               <p className="text-gray-600 text-xs ">
-                The standard chunk of Lorem Ipsum used since the 1500s is
-                reproduced below for those interested. Sections 1.10.32 and
-                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                reproduced in their exact original form, accompanied by English
-                versions from the 1914 translation by H. Rackham.
+                Una de las mejores formas de sacar provecho a tu experiencia en
+                apuestas deportivas es aprovechar las promociones que ofrecen
+                algunas casas de apuestas deportivas. Las promociones Arena
+                incluyen ofertas de apuestas gratuitas, reembolsos en caso de
+                pérdida y más. ¡Aprovecha estas ofertas para maximizar tus
+                posibilidades de ganar en las apuestas deportivas!
               </p>
             </div>
           </div>

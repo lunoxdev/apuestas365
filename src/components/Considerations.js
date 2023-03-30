@@ -8,60 +8,60 @@ import metodosPago from "../img/metodosPago.png";
 import usabilidad from "../img/usabilidad.png";
 import bonos from "../img/bonos.png";
 
-function Considerations() {
-  const [showMore, setShowMore] = useState(-1);
-  const [isDesktop, setIsDesktop] = useState(false);
+const items = [
+  {
+    id: 0,
+    img: deportes,
+    title: "Deportes",
+    desc: "Asegúrate de elegir una casa de apuestas que ofrezca una amplia variedad de deportes y eventos deportivos para apostar, desde los más populares como fútbol, tenis y baloncesto, hasta deportes menos conocidos pero con seguidores apasionados como el voleibol de playa, carreras de caballos y rugby, especialmente aquellos que son populares en tu región. Esto te permitirá tener más opciones y encontrar oportunidades interesantes para apostar.",
+  },
+  {
+    id: 1,
+    img: seguridad,
+    title: "Seguridad",
+    desc: "A la hora de elegir una casa de apuestas deportivas, es crucial considerar la seguridad que ofrece la plataforma. Asegúrate de que la casa de apuestas tenga medidas de seguridad confiables, como autenticación de dos factores y encriptación de datos, para proteger tus datos personales y financieros. Además, verifica si cuenta con licencia y está regulada por una entidad competente para garantizar un ambiente seguro y confiable para realizar tus apuestas deportivas.",
+  },
+  {
+    id: 2,
+    img: cuotas,
+    title: "Cuotas",
+    desc: "Las cuotas son uno de los factores más importantes a la hora de elegir una casa de apuestas deportivas. Debe ofrecer cuotas competitivas y justas para cada evento deportivo, lo que permitirá al usuario maximizar sus ganancias.",
+  },
+  {
+    id: 3,
+    img: apps,
+    title: "Plataforma móvil",
+    desc: "Las aplicaciones móviles pueden facilitar mucho la experiencia de las apuestas deportivas. Asegúrate de que la casa de apuestas tenga una app funcional, fácil de usar y compatible con tus dispositivos móviles.",
+  },
+  {
+    id: 4,
+    img: soporte,
+    title: "Asistencia al usuario",
+    desc: "Un buen servicio de soporte al cliente es esencial al momento de elegir una casa de apuestas. Asegúrate de que la plataforma cuente con un equipo de atención al cliente disponible las 24 horas del día y en varios idiomas. Verifica si la casa de apuestas cuenta con canales de soporte como chat en vivo, correo electrónico o teléfono.",
+  },
+  {
+    id: 5,
+    img: metodosPago,
+    title: "Métodos de pago",
+    desc: "Una buena casa de apuestas deportivas debe ofrecer una amplia variedad de métodos de pago, desde tarjetas de crédito y débito hasta billeteras electrónicas y transferencias bancarias, para garantizar una experiencia de depósito y retiro de fondos fluida y segura.",
+  },
+  {
+    id: 6,
+    img: usabilidad,
+    title: "Experiencia de usuario",
+    desc: "La usabilidad de la plataforma es esencial para una experiencia de apuestas satisfactoria. Asegúrate de que la casa de apuestas cuente con una interfaz intuitiva y fácil de usar. Verifica si la plataforma cuenta con funciones útiles como estadísticas en tiempo real, historial de apuestas y marcadores en vivo.",
+  },
+  {
+    id: 7,
+    img: bonos,
+    title: "Bonos y promociones",
+    desc: "Los bonos y promociones son una excelente manera de aumentar tus ganancias. Verifica si la casa de apuestas cuenta con bonos de bienvenida, bonos por depósito y otras promociones que te permitan obtener beneficios adicionales. Asegúrate de leer los términos y condiciones de los bonos antes de aceptarlos.",
+  },
+];
 
-  const items = [
-    {
-      id: 0,
-      img: deportes,
-      title: "Deportes",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 1,
-      img: seguridad,
-      title: "Seguridad",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 2,
-      img: cuotas,
-      title: "Cuotas",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 3,
-      img: apps,
-      title: "Apps",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 4,
-      img: soporte,
-      title: "Soporte",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 5,
-      img: metodosPago,
-      title: "Métodos de pago",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 6,
-      img: usabilidad,
-      title: "Usabilidad",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-    {
-      id: 7,
-      img: bonos,
-      title: "Bonos",
-      desc: "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.",
-    },
-  ];
+function Considerations() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [expandedItems, setExpandedItems] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -78,13 +78,22 @@ function Considerations() {
     <>
       <div class="grid items-center justify-center mt-5 mb-5 p-7">
         <h1 class="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
-          ¿Qué debo considerar antes de elegir una casa de apuestas?{" "}
+          Consejos para seleccionar la mejor casa de apuestas deportivas en
+          línea{" "}
         </h1>
         <h2 class="text-center text-gray-400 text-xs mt-5">
-          This is the content of the card. Lorem ipsum dolor sit amet
-          consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          famr aliquet vehicula.
+          Elegir la casa de apuestas deportivas en línea adecuada puede marcar
+          una gran diferencia en la experiencia de apuestas en línea. Antes de
+          tomar una decisión, considera aspectos como la seguridad, la variedad
+          de deportes y mercados disponibles, las promociones y bonificaciones,
+          la calidad del servicio al cliente, entre otros. En nuestra página web
+          te presentamos las consideraciones clave que debes tener en cuenta
+          antes de elegir una casa de apuestas deportivas en línea.
+          <br></br>
+          <div className=" font-extrabold mt-2">
+            ¡Asegúrate de tomar una decisión informada y disfrutar al máximo de
+            tus apuestas deportivas!
+          </div>
         </h2>
         <div className="grid md:p-10 mt-10">
           <ul className="grid grid-cols-2 gap-5">
@@ -99,24 +108,27 @@ function Considerations() {
                     alt="Banner"
                     className="w-40 h-32 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg"
                   />
+                  ß
                 </div>
                 <div className="md:ml-5 text-start">
-                  <h2 className="text-white text-sm font-semibold mb-2 mt-4">
+                  <h2 className="text-white text-base font-semibold mb-2 mt-4">
                     {item.title}
                   </h2>
 
-                  <div className="text-gray-600 text-xs">
-                    {showMore === item.id || isDesktop ? (
+                  <div className=" text-gray-600 text-xs">
+                    {expandedItems.includes(item.id) || isDesktop ? (
                       <>
                         <p>{item.desc}</p>
-                        {showMore === item.id && (
-                          <button
-                            className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
-                            onClick={() => setShowMore(null)}
-                          >
-                            Conocer menos
-                          </button>
-                        )}
+                        <button
+                          className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
+                          onClick={() =>
+                            setExpandedItems(
+                              expandedItems.filter((id) => id !== item.id)
+                            )
+                          }
+                        >
+                          Conocer menos
+                        </button>
                       </>
                     ) : (
                       <>
@@ -124,7 +136,9 @@ function Considerations() {
                         {item.desc.length > 50 && (
                           <button
                             className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
-                            onClick={() => setShowMore(item.id)}
+                            onClick={() =>
+                              setExpandedItems([...expandedItems, item.id])
+                            }
                           >
                             Conocer más
                           </button>

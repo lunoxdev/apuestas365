@@ -18,14 +18,14 @@ function Card({ sportsbook }) {
           <div className="flex justify-between p-3 ">
             <div className=" grid md:grid-cols-2 lg:grid lg:grid-cols-2 justify-center items-center">
               <div className="mt-4 ">
-                <h2 className=" text-base text-white font-bold">
+                <h2 className=" text-xl text-white font-bold">
                   {sportsbook.name}
                 </h2>
-                <div className="flex mt-2 ">
+                <div className="flex mt-3 ">
                   {Array.from({ length: 5 }, (_, i) => (
                     <svg
                       key={i}
-                      className={`w-4 h-4 mb-3  ${
+                      className={`w-4 h-4 mb-5  ${
                         i < sportsbook.stars
                           ? "text-yellow-400"
                           : "text-gray-300"

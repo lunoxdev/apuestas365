@@ -125,7 +125,7 @@ export default function List() {
                     <option value="">Todos</option>
                     <option value="Costa Rica">Costa Rica</option>
                     <option value="Panamá">Panamá</option>
-                    <option value="Ecuador">Ecuador</option>
+                    <option value="Argentina">Argentina</option>
                     <option value="Colombia">Colombia</option>
                   </select>
                 </div>

@@ -41,13 +41,20 @@ const Recommended = () => {
     <div>
       <div class="grid items-center justify-center mt-5 mb-5 p-5">
         <h1 class="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
-          Top 4 mejores casas de apuestas deportivas recomendadas por expertos
+          Las mejores casas de apuestas deportivas recomendadas por expertos:
+          <br></br>
+          ¡Descúbrelas aquí!
         </h1>
         <h2 class="text-center text-xs text-gray-400 mt-5">
-          This is the content of the card. Lorem ipsum dolor sit amet
-          consectetur adipiscing elit. Duis eu sapien ut ipsum mollis sagittis.
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          famr aliquet vehicula.
+          Encuentra las mejores opciones de casas de apuestas deportivas
+          recomendadas por expertos en nuestra página web. Ofrecemos opciones
+          confiables y seguras para que puedas disfrutar de las apuestas
+          deportivas con tranquilidad. Explora nuestra selección y encuentra la
+          casa de apuestas perfecta para ti.
+          <br></br>
+          <div className=" font-extrabold mt-1">
+            ¡Comienza a ganar hoy mismo!
+          </div>
         </h2>
       </div>
 

@@ -9,8 +9,20 @@ export default function Footer() {
         </h1>
         <div className="mb-5 text-xs flex flex-col justify-center items-center md:justify-end lg:justify-end">
           <h2 class="text-center text-gray-400 mt-5 mb-5">
-            This is the content of the card. Lorem ipsum dolor sit amet
-            consectetur adipiscing elit. Pemalesuada famr aliquet vehicula.
+            Somos un equipo de apasionados por las apuestas deportivas en línea,
+            comprometidos en brindarte la mejor información y comparativas de
+            casas de apuestas deportivas para ayudarte a tomar decisiones
+            informadas en tus apuestas. Nuestro equipo está formado por expertos
+            en la industria de las apuestas deportivas, con amplia experiencia
+            en el mercado latinoamericano. Nos esforzamos por brindarte una
+            experiencia de usuario única, ofreciendo contenido relevante,
+            actualizado y fácil de entender para que tengas una experiencia de
+            apuestas deportivas en línea segura y emocionante.
+            <br></br>
+            <div className=" text-base text-white ont-extrabold mt-3">
+              ¡Gracias por confiar en nosotros para tu experiencia de apuestas
+              en línea!
+            </div>
           </h2>
           <button class="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-28 h-10 lg:w-24">
             <a href="mailto:lunox.code@gmail.com">Contacto</a>
