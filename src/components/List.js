@@ -64,7 +64,7 @@ export default function List() {
 
   return (
     <div>
-      <div className="flex mt-5 p-7 gap-5">
+      <div className="flex p-5 gap-5">
         <div>
           <header className=" flex flex-col lg:flex-row bg-gray-800 p-8 rounded-lg mb-5">
             <div className="flex flex-row mb-5 bg-gray-300 rounded-md lg:w-96 ">
@@ -133,7 +133,7 @@ export default function List() {
             </div>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-3">
             {sortedSportsbooks
               .filter((sportsbook) =>
                 sportsbook.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -159,7 +159,7 @@ export default function List() {
           )}
         </div>
 
-        <div className="text-white hidden sm:block md:basis-52 lg:basis-80">
+        <div className="text-white hidden sm:block md:basis-52">
           <div className="flex-auto text-white">
             <MostPopular />
           </div>

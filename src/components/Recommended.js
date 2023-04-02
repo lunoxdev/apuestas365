@@ -13,7 +13,7 @@ const Recommended = () => {
   const settings = {
     centerMode: true,
     centerPadding: "60px",
-    slidesToShow: 2,
+    slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
@@ -22,7 +22,7 @@ const Recommended = () => {
         settings: {
           centerMode: true,
           centerPadding: "40px",
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
       {
@@ -31,7 +31,7 @@ const Recommended = () => {
           arrows: false,
           centerMode: true,
           centerPadding: "50px",
-          slidesToShow: 1,
+          slidesToShow: 2,
         },
       },
     ],
@@ -58,22 +58,22 @@ const Recommended = () => {
         </h2>
       </div>
 
-      <div className="max-w-4xl mx-auto px-14 md:px-32 mb-10">
+      <div className=" max-w-2xl mx-auto mb-10">
         <Slider {...settings}>
           {topSportsbooks.map((sportsbook) => (
-            <div key={sportsbook.popular} className="px-3">
+            <div key={sportsbook.popular} className="px-2">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 <img
-                  className="w-full h-48 object-cover"
+                  className="w-full h-32 object-cover"
                   src={sportsbook.img}
                   alt={sportsbook.imageAlt}
                 />
-                <h2 className="flex justify-center text-gray-900 font-bold text-xl mb-2 mt-2">
+                <h2 className="flex justify-center text-gray-900 font-bold text-xl mt-2">
                   {sportsbook.name}
                 </h2>
 
-                <div className="mb-2 flex justify-center p-4">
-                  <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-full h-12">
+                <div className=" flex justify-center p-4 ">
+                  <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-full h-10">
                     JUGAR
                   </button>
                 </div>

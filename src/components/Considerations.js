@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import deportes from "../img/deportes.png";
-import seguridad from "../img/seguridad.png";
-import cuotas from "../img/cuotas.png";
-import apps from "../img/apps.png";
-import soporte from "../img/soporte.png";
-import metodosPago from "../img/metodosPago.png";
-import usabilidad from "../img/usabilidad.png";
-import bonos from "../img/bonos.png";
+import deportes from "../img/deportes.gif";
+import seguridad from "../img/seguridad.gif";
+import cuotas from "../img/cuotas.gif";
+import apps from "../img/apps.gif";
+import soporte from "../img/soporte.gif";
+import metodosPago from "../img/metodosPago.gif";
+import usabilidad from "../img/usabilidad.gif";
+import bonos from "../img/bonos.gif";
 
 const items = [
   {
@@ -106,21 +106,23 @@ function Considerations() {
                   <img
                     src={item.img}
                     alt="Banner"
-                    className="w-40 h-32 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg"
+                    className="w-40 h-40 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg object-cover"
                   />
                   ß
                 </div>
                 <div className="md:ml-5 text-start">
-                  <h2 className="text-white text-base font-semibold mb-2 mt-4">
+                  <h2 className="text-white text-base font-semibold mb-2">
                     {item.title}
                   </h2>
 
-                  <div className=" text-gray-600 text-xs">
+                  <div className="text-gray-600 text-xs">
                     {expandedItems.includes(item.id) || isDesktop ? (
                       <>
                         <p>{item.desc}</p>
                         <button
-                          className="text-blue-500 text-xs hover:text-zinc-300 underline mt-2"
+                          className={`text-blue-500 text-xs hover:text-zinc-300 underline mt-2 ${
+                            isDesktop ? "invisible" : ""
+                          }`}
                           onClick={() =>
                             setExpandedItems(
                               expandedItems.filter((id) => id !== item.id)

@@ -58,6 +58,11 @@ function SimpleAccordion() {
       content:
         "En general, sí. Sin embargo, cada casa de apuestas deportivas tiene sus propias políticas de retiro, y algunas pueden tener ciertas restricciones o requerir verificación de identidad antes de procesar un retiro. Asegúrate de leer cuidadosamente los términos y condiciones de retiro de tu casa de apuestas.",
     },
+    {
+      title: "¿Qué es el Bet Builder en Apuestas Deportivas?",
+      content:
+        "Es una función de apuestas deportivas que permite a los usuarios crear apuestas personalizadas combinando diferentes mercados y eventos deportivos. En lugar de limitarse a las opciones de apuestas preestablecidas, los usuarios pueden elegir y combinar diferentes mercados, como resultados exactos, número de goles, tarjetas amarillas, entre otros. Esta herramienta es muy popular en Latinoamérica porque permite a los apostadores tener más control y creatividad en sus apuestas, lo que les ayuda a diversificar sus estrategias y aumentar sus posibilidades de ganar.",
+    },
   ];
 
   return (
@@ -76,7 +81,7 @@ function SimpleAccordion() {
                 setSelectedIndex(index === selectedIndex ? null : index)
               }
             >
-              <span className="font-medium text-sm text-white hover:text-zinc-400">
+              <span className="flex flex-1 text-start font-medium text-sm text-white hover:text-zinc-400">
                 {item.title}
               </span>
               <svg
@@ -90,10 +95,12 @@ function SimpleAccordion() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                style={{ width: "1.2rem", height: "1.2rem" }}
               >
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
+
             {selectedIndex === index && (
               <div className="px-8 py-4 text-xs md:text-xs bg-black rounded-b-md text-gray-600">
                 <p>{item.content}</p>
