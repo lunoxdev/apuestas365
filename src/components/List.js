@@ -55,7 +55,7 @@ export default function List() {
   const clearButton =
     searchTerm.length > 0 ? (
       <button
-        className="h-6 w-6 text-gray-500 mx-2 my-auto cursor-pointer"
+        className="ml-20 h-6 w-6 text-gray-500 mx-auto my-auto"
         onClick={handleClearSearch}
       >
         X
@@ -64,13 +64,14 @@ export default function List() {
 
   return (
     <div>
-      <div className="flex p-5 gap-5">
-        <div>
-          <header className=" flex flex-col lg:flex-row bg-gray-800 p-8 rounded-lg mb-5">
-            <div className="flex flex-row mb-5 bg-gray-300 rounded-md lg:w-96 ">
+      <div className="flex px-5 gap-5">
+        <div className="">
+          <header className="flex flex-col justify-start items-start lg:justify-center lg:items-center  bg-gray-800 p-2 rounded-lg mb-5">
+            {/* Search bar */}
+            <div className="flex w-full lg:w-96 bg-gray-300 rounded-md mt-3 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-400 mx-2 my-auto"
+                className="h-6 w-6 ml-2 text-gray-400 my-auto"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -89,7 +90,7 @@ export default function List() {
                 />
               </svg>
               <input
-                className="text-black text-base bg-gray-300 rounded-md w-full h-10 focus:outline-none px-2 py-1"
+                className="text-black ml-2 text-base bg-gray-300 rounded-md h-10 focus:outline-none "
                 type="text"
                 placeholder="Buscar"
                 value={searchTerm}
@@ -97,53 +98,69 @@ export default function List() {
               />
               {clearButton}
             </div>
-            <div class="flex justify-center lg:ml-10">
-              <div className="flex divide-x-2">
-                <div className=" grid justify-center items-center">
-                  <span className="text-white text-xs ml-1 mb-3">
-                    Ordenar por:
-                  </span>
-                  <select
-                    className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 p-1 mr-5"
-                    value={sortType}
-                    onChange={(event) => setSortType(event.target.value)}
-                  >
-                    <option value="name-first">Letra inicial</option>
-                    <option value="name-last">Letra final</option>
-                    <option value="stars">Clasificación</option>
-                  </select>
-                </div>
-                <div className=" grid justify-center items-center">
-                  <span className="text-white text-xs ml-5 mb-2">
-                    Selecciona el país:
-                  </span>
-                  <select
-                    className="text-white text-xs ml-5 bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 p-1 px-2"
-                    value={country}
-                    onChange={(event) => setCountry(event.target.value)}
-                  >
-                    <option value="">Todos</option>
-                    <option value="Costa Rica">Costa Rica</option>
-                    <option value="Panamá">Panamá</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Colombia">Colombia</option>
-                  </select>
-                </div>
-              </div>
+
+            {/* Por letras */}
+            <div className="flex gap-3 mt-5 mb-2">
+              <select
+                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 py-1"
+                value={sortType}
+                onChange={(event) => setSortType(event.target.value)}
+              >
+                <option value="name-first">Letra (A-Z)</option>
+                <option value="name-last">Letra (Z-A)</option>
+                <option value="stars">Clasificación</option>
+              </select>
+
+              {/* Metodo de pago */}
+              <select
+                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2"
+                // value={metoPago}
+                // onChange={(event) => setMetoPago(event.target.value)}
+              >
+                <option value="">Metodo de pago</option>
+                <option value="Visa/Master Card">Visa/Master Card</option>
+                <option value="Transferencia Bancaria">
+                  Transferencia Bancaria
+                </option>
+                <option value="Criptomonedas">Criptomonedas</option>
+                <option value="Nequi">Nequi</option>
+              </select>
+
+              {/* Por país */}
+              <select
+                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2"
+                value={country}
+                onChange={(event) => setCountry(event.target.value)}
+              >
+                <option value="">País/Todos</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+              </select>
             </div>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-3">
-            {sortedSportsbooks
-              .filter((sportsbook) =>
-                sportsbook.name.toLowerCase().includes(searchTerm.toLowerCase())
-              )
-              .slice(0, numToShow)
-              .map((sportsbook) => (
-                <div key={sportsbook.id}>
-                  <Card sportsbook={sportsbook} />
-                </div>
-              ))}
+          <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-3">
+            {sortedSportsbooks.length > 0 ? (
+              sortedSportsbooks
+                .filter((sportsbook) =>
+                  sportsbook.name
+                    .toLowerCase()
+                    .includes(searchTerm.toLowerCase())
+                )
+                .slice(0, numToShow)
+                .map((sportsbook) => (
+                  <div key={sportsbook.id}>
+                    <Card sportsbook={sportsbook} />
+                  </div>
+                ))
+            ) : (
+              <div className=" flex w-96 text-gray-500">
+                No se encontró ningún resultado para{" "}
+                <strong>"{searchTerm}"</strong>
+              </div>
+            )}
           </div>
 
           {!allShown && (

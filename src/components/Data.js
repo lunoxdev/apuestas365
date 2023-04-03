@@ -18,6 +18,7 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "✓",
     referidos: "X",
+    metoPagos: ["Nequi", "Transferencia Bancaria"],
   },
   {
     id: 1,
@@ -36,6 +37,7 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "X",
     referidos: "✓",
+    metoPagos: ["Nequi", "Transferencia Bancaria"],
   },
   {
     id: 2,
@@ -53,6 +55,7 @@ export const sportsbooks = [
     enVivo: "✓",
     cashOut: "✓",
     referidos: "X",
+    metoPagos: ["Nequi"],
   },
   {
     id: 3,
@@ -71,6 +74,7 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "X",
     referidos: "✓",
+    metoPagos: ["Criptomonedas", "Transferencia Bancaria"],
   },
   {
     id: 4,
@@ -88,6 +92,7 @@ export const sportsbooks = [
     enVivo: "✓",
     cashOut: "✓",
     referidos: "✓",
+    metoPagos: ["Criptomonedas", "Visa/Master Card"],
   },
   {
     id: 5,
@@ -106,6 +111,7 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "✓",
     referidos: "X",
+    metoPagos: ["Nequi", "Visa/Master Card"],
   },
   {
     id: 6,
@@ -123,6 +129,7 @@ export const sportsbooks = [
     enVivo: "✓",
     cashOut: "X",
     referidos: "✓",
+    metoPagos: ["Criptomonedas", "Nequi"],
   },
   {
     id: 7,
@@ -140,5 +147,6 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "X",
     referidos: "✓",
+    metoPagos: ["Criptomonedas", "Visa/Master Card"],
   },
 ];
