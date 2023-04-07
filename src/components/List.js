@@ -8,6 +8,7 @@ export default function List() {
   const [sortType, setSortType] = useState("name-first");
   const [country, setCountry] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+  const [metoPago, setMetoPago] = useState("");
 
   function handleLoadMore() {
     setNumToShow(numToShow + 4);
@@ -37,12 +38,21 @@ export default function List() {
     return sportsbooks;
   };
 
+  const filterByMetodoPago = (sportsbooks) => {
+    if (metoPago !== "") {
+      return sportsbooks.filter((sportsbook) =>
+        sportsbook.metoPagos.includes(metoPago)
+      );
+    }
+    return sportsbooks;
+  };
+
   const filteredSportsbooks = sportsbooks.filter((sportsbook) =>
     sportsbook.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   const sortedSportsbooks = sortSportsbooks(
-    filterByCountry(filteredSportsbooks),
+    filterByMetodoPago(filterByCountry(filteredSportsbooks)),
     sortType
   );
 
@@ -66,7 +76,7 @@ export default function List() {
     <div>
       <div className="flex px-5 gap-5">
         <div className="">
-          <header className="flex flex-col justify-start items-start lg:justify-center lg:items-center  bg-gray-800 p-2 rounded-lg mb-5">
+          <header className="flex flex-col justify-start items-start lg:justify-center lg:items-center bg-gray-800 p-2 rounded-lg mb-5">
             {/* Search bar */}
             <div className="flex w-full lg:w-96 bg-gray-300 rounded-md mt-3 ">
               <svg
@@ -114,8 +124,8 @@ export default function List() {
               {/* Metodo de pago */}
               <select
                 className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2"
-                // value={metoPago}
-                // onChange={(event) => setMetoPago(event.target.value)}
+                value={metoPago}
+                onChange={(event) => setMetoPago(event.target.value)}
               >
                 <option value="">Metodo de pago</option>
                 <option value="Visa/Master Card">Visa/Master Card</option>
@@ -141,7 +151,7 @@ export default function List() {
             </div>
           </header>
 
-          <div className="grid grid-cols-1 justify-center items-center sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-4 gap-3">
             {sortedSportsbooks.length > 0 ? (
               sortedSportsbooks
                 .filter((sportsbook) =>
@@ -157,8 +167,7 @@ export default function List() {
                 ))
             ) : (
               <div className=" flex w-96 text-gray-500">
-                No se encontró ningún resultado para{" "}
-                <strong>"{searchTerm}"</strong>
+                No se encontró ningún resultado, intente nuevamente.
               </div>
             )}
           </div>

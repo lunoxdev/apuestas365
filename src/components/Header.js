@@ -2,8 +2,8 @@ import BG from "../img/banner.png";
 
 export default function Header() {
   return (
-    <div className="App">
-      <div className="relative">
+    <div id="inicio" className="App">
+      <div className="relative mt-12">
         <img
           src={BG}
           alt="Banner"
