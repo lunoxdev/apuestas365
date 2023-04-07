@@ -65,7 +65,7 @@ export default function List() {
   const clearButton =
     searchTerm.length > 0 ? (
       <button
-        className="ml-20 h-6 w-6 text-gray-500 mx-auto my-auto"
+        className="ml-20 lg:ml-28 h-6 w-6 text-gray-500 mx-auto my-auto"
         onClick={handleClearSearch}
       >
         X
@@ -166,7 +166,7 @@ export default function List() {
                   </div>
                 ))
             ) : (
-              <div className=" flex w-96 text-gray-500">
+              <div className=" flex w-96 text-gray-500 text-sm">
                 No se encontró ningún resultado, intente nuevamente.
               </div>
             )}

@@ -3,9 +3,14 @@ import { useState } from "react";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLanguage, setIsLanguage] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleToggle = () => {
+    setIsChecked(!isChecked);
+  };
 
   return (
-    <nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <span className="font-semibold text-xl tracking-tight">LOGO</span>
       </div>
@@ -27,7 +32,7 @@ function NavBar() {
       <div
         className={`${
           isOpen ? "block" : "hidden"
-        } w-full block flex-grow lg:flex lg:w-auto lg:items-end`}
+        } w-full block flex-grow lg:flex lg:w-auto lg:items-center`}
       >
         <div className="text-sm lg:flex-grow lg:text-center">
           <a
@@ -40,7 +45,7 @@ function NavBar() {
             href="#recomendadas"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
           >
-            Recomendadas
+            Recomendaciones
           </a>
           <a
             href="#consejos"
@@ -67,11 +72,27 @@ function NavBar() {
             Nosotros
           </a>
         </div>
-        <div className="relative inline-block">
+        <div className="relative flex justify-between ">
+          <div className="relative inline-block w-10 mt-5 lg:mt-2 mr-5 align-middle select-none">
+            <input
+              type="checkbox"
+              name="toggle"
+              id="toggle"
+              checked={isChecked}
+              onChange={handleToggle}
+              className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+            />
+            <label
+              htmlFor="toggle"
+              className={`toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer ${
+                isChecked ? "bg-blue-500" : ""
+              }`}
+            ></label>
+          </div>
           <button
             type="button"
             onClick={() => setIsLanguage(!isLanguage)}
-            className="inline-flex mt-5 lg:mt-0 font-medium py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
+            className="inline-flex mt-3 lg:mt-0 font-medium py-2 text-sm text-gray-900 dark:text-white rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white"
           >
             <svg
               className="w-5 h-5 mr-2 rounded-full"
@@ -150,7 +171,7 @@ function NavBar() {
                   >
                     <div className="inline-flex items-center">
                       <svg
-                        class="h-5 w-5 rounded-full mr-2"
+                        className="h-5 w-5 rounded-full mr-2"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         id="flag-icon-css-de"
@@ -171,9 +192,9 @@ function NavBar() {
                     role="menuitem"
                   >
                     <div className="inline-flex items-center">
-                      <div class="inline-flex items-center">
+                      <div className="inline-flex items-center">
                         <svg
-                          class="h-5 w-5 rounded-full mr-2"
+                          className="h-5 w-5 rounded-full mr-2"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           id="flag-icon-css-de"
