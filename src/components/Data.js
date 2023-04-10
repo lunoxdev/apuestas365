@@ -1,3 +1,6 @@
+import android from "../img/android.png";
+import ios from "../img/ios.png";
+import appmovil from "../img/app_movil.png";
 import img from "../img/banner.png";
 
 export const sportsbooks = [
@@ -6,8 +9,7 @@ export const sportsbooks = [
     name: "Abet",
     img: img,
     imageAlt: "Abet",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 0,
     stars: 5,
     countries: ["Costa Rica", "Panamá", "Argentina"],
@@ -19,14 +21,25 @@ export const sportsbooks = [
     cashOut: "✓",
     referidos: "X",
     metoPagos: ["Nequi", "Transferencia Bancaria"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android, ios, appmovil],
   },
   {
     id: 1,
     name: "Bet365",
     img: img,
     imageAlt: "Bet365",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 0,
     stars: 1,
     countries: ["Costa Rica", "Argentina"],
@@ -38,14 +51,23 @@ export const sportsbooks = [
     cashOut: "X",
     referidos: "✓",
     metoPagos: ["Nequi", "Transferencia Bancaria"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android],
   },
   {
     id: 2,
     name: "Poker Stars",
     img: img,
     imageAlt: "Poker Stars",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 1,
     stars: 4,
     countries: ["Costa Rica"],
@@ -56,14 +78,23 @@ export const sportsbooks = [
     cashOut: "✓",
     referidos: "X",
     metoPagos: ["Nequi"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android, ios, appmovil],
   },
   {
     id: 3,
     name: "LeoVegas",
     img: img,
     imageAlt: "LeoVegas",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 0,
     stars: 2,
     countries: ["Panamá"],
@@ -74,15 +105,30 @@ export const sportsbooks = [
     enVivo: "X",
     cashOut: "X",
     referidos: "✓",
-    metoPagos: ["Criptomonedas", "Transferencia Bancaria"],
+    metoPagos: [
+      "Criptomonedas",
+      "Transferencia Bancaria",
+      "Nequi",
+      "Visa/Master Card",
+      "Oxxo",
+    ],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android, ios, appmovil],
   },
   {
     id: 4,
     name: "Betsson",
     img: img,
     imageAlt: "Betsson",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 1,
     stars: 4,
     countries: ["Costa Rica", "Colombia"],
@@ -93,14 +139,25 @@ export const sportsbooks = [
     cashOut: "✓",
     referidos: "✓",
     metoPagos: ["Criptomonedas", "Visa/Master Card"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android, ios],
   },
   {
     id: 5,
     name: "Sportsbet",
     img: img,
     imageAlt: "Sportsbet",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 1,
     stars: 5,
     countries: ["Argentina"],
@@ -112,14 +169,25 @@ export const sportsbooks = [
     cashOut: "✓",
     referidos: "X",
     metoPagos: ["Nequi", "Visa/Master Card"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [ios, appmovil],
   },
   {
     id: 6,
     name: "William Hill",
     img: img,
     imageAlt: "William Hill",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 1,
     stars: 1,
     countries: ["Costa Rica", "Panamá"],
@@ -130,14 +198,23 @@ export const sportsbooks = [
     cashOut: "X",
     referidos: "✓",
     metoPagos: ["Criptomonedas", "Nequi"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [ios, appmovil],
   },
   {
     id: 7,
     name: "Betsafe",
     img: img,
     imageAlt: "Betsafe",
-    description:
-      "This is the content of the card. Lorem ipsum dolor sit amet consectetur adipiscing sdadsad asdasswq.",
+    description: "Bono de bienvenida del 100% con tu primer deposito.",
     popular: 0,
     stars: 3,
     countries: ["Costa Rica", "Panamá", "Argentina", "Colombia"],
@@ -148,5 +225,19 @@ export const sportsbooks = [
     cashOut: "X",
     referidos: "✓",
     metoPagos: ["Criptomonedas", "Visa/Master Card"],
+    ventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    desventajas: [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec feugiat ligula. Sed dignissim neque eu mollis eleifend.",
+    ],
+    app: [android, ios, appmovil],
   },
 ];

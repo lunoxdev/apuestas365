@@ -3,11 +3,7 @@ import { useState } from "react";
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLanguage, setIsLanguage] = useState(false);
-  const [isChecked, setIsChecked] = useState(false);
-
-  const handleToggle = () => {
-    setIsChecked(!isChecked);
-  };
+  const [isOn, setIsOn] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5">
@@ -54,6 +50,12 @@ function NavBar() {
             Consejos
           </a>
           <a
+            href="#primerospasos"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+          >
+            Como comenzar
+          </a>
+          <a
             href="#promociones"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
           >
@@ -73,22 +75,6 @@ function NavBar() {
           </a>
         </div>
         <div className="relative flex justify-between ">
-          <div className="relative inline-block w-10 mt-5 lg:mt-2 mr-5 align-middle select-none">
-            <input
-              type="checkbox"
-              name="toggle"
-              id="toggle"
-              checked={isChecked}
-              onChange={handleToggle}
-              className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
-            />
-            <label
-              htmlFor="toggle"
-              className={`toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer ${
-                isChecked ? "bg-blue-500" : ""
-              }`}
-            ></label>
-          </div>
           <button
             type="button"
             onClick={() => setIsLanguage(!isLanguage)}
@@ -136,11 +122,8 @@ function NavBar() {
           </button>
 
           {isLanguage && (
-            <div className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute right-0 left-0 lg:left-auto">
-              <ul
-                className="py-2 text-sm text-gray-700 dark:text-gray-200"
-                aria-labelledby="dropdownRightButton"
-              >
+            <div className="z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 absolute right-0 left-0 lg:left-auto top-14 lg:top-10">
+              <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
                 <li>
                   <a
                     href="/"
@@ -214,6 +197,18 @@ function NavBar() {
               </ul>
             </div>
           )}
+          <div
+            onClick={() => setIsOn(!isOn)}
+            className={`w-10 h-6 rounded-full mt-5 lg:mt-2 lg:ml-5 ${
+              isOn ? "bg-green-500" : "bg-gray-300"
+            }`}
+          >
+            <div
+              className={`transform transition-transform ease-in-out w-6 h-6 rounded-full ${
+                isOn ? "translate-x-4 bg-white" : "translate-x-0 bg-gray-500"
+              }`}
+            />
+          </div>
         </div>
       </div>
     </nav>

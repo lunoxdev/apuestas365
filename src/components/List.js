@@ -183,6 +183,12 @@ export default function List() {
               </button>
             </div>
           )}
+          <div className="flex justify-center items-center mt-5 text-white">
+            <div>
+              Mostrando <strong>{numToShow}</strong> de{" "}
+              <strong>{sortedSportsbooks.length}</strong> resultados
+            </div>
+          </div>
         </div>
 
         <div className="text-white hidden sm:block md:basis-52">

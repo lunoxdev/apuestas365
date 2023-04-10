@@ -1,6 +1,7 @@
 import "./App.css";
 import Considerations from "./components/Considerations";
 import Faq from "./components/Faq";
+import FirstSteps from "./components/FirstSteps";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import List from "./components/List";
@@ -16,6 +17,7 @@ function App() {
       <List />
       <Recommended />
       <Considerations />
+      <FirstSteps />
       <Promotions />
       <Faq />
       <Footer />
