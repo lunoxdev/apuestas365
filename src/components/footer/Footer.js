@@ -1,6 +1,9 @@
-import React from "react";
+import ResponsibleGaming from "../footer/ResponsibleGaming";
+import Contact from "./Contact";
+import PrivacyPolicy from "./PrivacyPolicy";
+import TermsAndConditions from "./TermsAndConditions";
 
-export default function Footer() {
+export default function Footer(sportsbook) {
   return (
     <footer>
       <div id="nosotros" className="grid items-center justify-center mb-5 p-7">
@@ -24,9 +27,6 @@ export default function Footer() {
               en línea!
             </div>
           </h2>
-          <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-28 h-10 lg:w-24">
-            <a href="mailto:lunox.code@gmail.com">Contacto</a>
-          </button>
         </div>
         <hr></hr>
         <div className="flex flex-col mt-5 text-xs text-white justify-center items-center">
@@ -37,6 +37,12 @@ export default function Footer() {
             <img src="/logo3.png" alt="Logo 3" className="h-6 mr-4" />
             <img src="/logo4.png" alt="Logo 4" className="h-6" />
           </div> */}
+          <div className="flex gap-4 text-center mb-5">
+            <Contact />
+            <ResponsibleGaming />
+            <TermsAndConditions />
+            <PrivacyPolicy />
+          </div>
           &copy; 2023 My Website. All rights reserved.
         </div>
       </div>

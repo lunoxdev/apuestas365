@@ -44,16 +44,16 @@ function NavBar() {
             Recomendaciones
           </a>
           <a
-            href="#consejos"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
-          >
-            Consejos
-          </a>
-          <a
             href="#primerospasos"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
           >
             Como comenzar
+          </a>
+          <a
+            href="#consejos"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+          >
+            Consejos
           </a>
           <a
             href="#promociones"
@@ -69,7 +69,7 @@ function NavBar() {
           </a>
           <a
             href="#nosotros"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white hover:underline hover:underline-offset-4"
           >
             Nosotros
           </a>

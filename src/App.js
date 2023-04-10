@@ -2,7 +2,7 @@ import "./App.css";
 import Considerations from "./components/Considerations";
 import Faq from "./components/Faq";
 import FirstSteps from "./components/FirstSteps";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 import Header from "./components/Header";
 import List from "./components/List";
 import NavBar from "./components/NavBar";
@@ -16,8 +16,8 @@ function App() {
       <Header />
       <List />
       <Recommended />
-      <Considerations />
       <FirstSteps />
+      <Considerations />
       <Promotions />
       <Faq />
       <Footer />
