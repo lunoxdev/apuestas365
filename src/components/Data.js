@@ -1,6 +1,6 @@
-import android from "../img/android.png";
-import ios from "../img/ios.png";
-import appmovil from "../img/app_movil.png";
+import android from "../img/apps/android.png";
+import ios from "../img/apps/ios.png";
+import appmovil from "../img/apps/app_movil.png";
 import img from "../img/banner.png";
 
 export const sportsbooks = [

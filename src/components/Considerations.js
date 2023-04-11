@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import deportes from "../img/deportes.gif";
-import seguridad from "../img/seguridad.gif";
-import cuotas from "../img/cuotas.gif";
-import apps from "../img/apps.gif";
-import soporte from "../img/soporte.gif";
-import metodosPago from "../img/metodosPago.gif";
-import usabilidad from "../img/usabilidad.gif";
-import bonos from "../img/bonos.gif";
+import deportes from "../img/considerations/deportes.gif";
+import seguridad from "../img/considerations/seguridad.gif";
+import cuotas from "../img/considerations/cuotas.gif";
+import apps from "../img/considerations/apps.gif";
+import soporte from "../img/considerations/soporte.gif";
+import metodosPago from "../img/considerations/metodosPago.gif";
+import usabilidad from "../img/considerations/usabilidad.gif";
+import bonos from "../img/considerations/bonos.gif";
 
 const items = [
   {

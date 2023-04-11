@@ -38,10 +38,10 @@ export default function Footer(sportsbook) {
             <img src="/logo4.png" alt="Logo 4" className="h-6" />
           </div> */}
           <div className="flex gap-4 text-center mb-5">
-            <Contact />
-            <ResponsibleGaming />
             <TermsAndConditions />
             <PrivacyPolicy />
+            <ResponsibleGaming />
+            <Contact />
           </div>
           &copy; 2023 My Website. All rights reserved.
         </div>
