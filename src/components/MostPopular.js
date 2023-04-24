@@ -7,14 +7,12 @@ export default function MostPopular() {
   );
 
   return (
-    <div className="w-full max-w-md bg-white border-gray-200 rounded-lg shadow p-7 mr-6 dark:bg-gray-800 dark:border-gray-700">
-      <div className="flex items-center justify-between mb-4">
-        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-          Más populares
-        </h5>
+    <div className="w-full max-w-md rounded-lg shadow p-7 mr-6 bg-primary">
+      <div className="flex items-center justify-between mb-4 ">
+        <h1 className="text-xl font-bold leading-none">Más populares</h1>
       </div>
       <div className="flow-root">
-        <ul className=" divide-y divide-gray-200 dark:divide-gray-700">
+        <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {/* Map over the filtered sportsbooks array */}
           {popularSportsbooks.map((sportsbook) => (
             <li key={sportsbook.id} className="py-3 sm:py-4">
@@ -28,9 +26,7 @@ export default function MostPopular() {
                   />
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
-                    {sportsbook.name}
-                  </p>
+                  <p className="text-sm font-medium">{sportsbook.name}</p>
                   {/* Stars */}
                   <div className="flex mt-1">
                     {/* Renderizamos todas las estrellas */}
@@ -52,12 +48,12 @@ export default function MostPopular() {
                 </div>
                 {/* Button Play */}
                 <div className="p-3">
-                  <a
+                  <button
                     href="."
                     className="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
                   >
                     Apostar
-                  </a>
+                  </button>
                 </div>
               </div>
             </li>

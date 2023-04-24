@@ -77,11 +77,11 @@ function Considerations() {
   return (
     <div id="consejos">
       <div className="grid items-center justify-center mt-5 mb-5 p-7">
-        <h1 className="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
+        <h1 className="text-center text-2xl md:text-2xl lg:text-3xl p-2">
           Consejos para seleccionar la mejor casa de apuestas deportivas en
           línea{" "}
         </h1>
-        <h2 className="text-center text-gray-400 text-xs mt-5">
+        <h2 className="text-center text-xs mt-5 text-gray-500">
           Elegir la casa de apuestas deportivas en línea adecuada puede marcar
           una gran diferencia en la experiencia de apuestas en línea. Antes de
           tomar una decisión, considera aspectos como la seguridad, la variedad
@@ -108,14 +108,11 @@ function Considerations() {
                     alt="Banner"
                     className="w-40 h-40 md:w-32 md:h-32 lg:w-38 lg:h-38 rounded-lg object-cover"
                   />
-                  ß
                 </div>
                 <div className="md:ml-5 text-start">
-                  <h2 className="text-white text-base font-semibold mb-2">
-                    {item.title}
-                  </h2>
+                  <h2 className="text-base font-semibold mb-2">{item.title}</h2>
 
-                  <div className="text-gray-600 text-xs">
+                  <div className="text-xs text-gray-600">
                     {expandedItems.includes(item.id) || isDesktop ? (
                       <>
                         <p>{item.desc}</p>

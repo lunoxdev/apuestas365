@@ -76,12 +76,12 @@ export default function List() {
     <div>
       <div className="flex px-5 gap-5">
         <div className="">
-          <header className="flex flex-col justify-start items-start lg:justify-center lg:items-center bg-gray-800 p-2 rounded-lg mb-5">
+          <header className="flex flex-col justify-start items-start lg:justify-center lg:items-center bg-primary p-2 rounded-lg mb-5">
             {/* Search bar */}
-            <div className="flex w-full lg:w-96 bg-gray-300 rounded-md mt-3 ">
+            <div className="flex w-full lg:w-96 bg-white rounded-md mt-3 border-gray-300 border-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 ml-2 text-gray-400 my-auto"
+                className="h-6 w-6 ml-2 text-black my-auto"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -100,7 +100,7 @@ export default function List() {
                 />
               </svg>
               <input
-                className="text-black ml-2 text-base bg-gray-300 rounded-md h-10 focus:outline-none "
+                className="text-black ml-2 text-base bg-white rounded-md h-10 focus:outline-none "
                 type="text"
                 placeholder="Buscar"
                 value={searchTerm}
@@ -112,7 +112,7 @@ export default function List() {
             {/* Por letras */}
             <div className="flex gap-3 mt-5 mb-2">
               <select
-                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2 py-1"
+                className="text-xs bg-btn2 text-black hover:text-zinc-500 rounded-md border-gray-300 border-2 py-1"
                 value={sortType}
                 onChange={(event) => setSortType(event.target.value)}
               >
@@ -123,7 +123,7 @@ export default function List() {
 
               {/* Metodo de pago */}
               <select
-                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2"
+                className="text-xs bg-btn2 text-black hover:text-zinc-500 rounded-md border-gray-300 border-2 py-1"
                 value={metoPago}
                 onChange={(event) => setMetoPago(event.target.value)}
               >
@@ -138,7 +138,7 @@ export default function List() {
 
               {/* Por país */}
               <select
-                className="text-white text-xs bg-gray-800 hover:text-zinc-300 rounded-md border-gray-600 border-2"
+                className="text-xs bg-btn2 text-black hover:text-zinc-500 rounded-md border-gray-300 border-2 py-1"
                 value={country}
                 onChange={(event) => setCountry(event.target.value)}
               >
@@ -191,8 +191,8 @@ export default function List() {
           </div>
         </div>
 
-        <div className="text-white hidden sm:block md:basis-52">
-          <div className="flex-auto text-white">
+        <div className="hidden sm:block md:basis-52">
+          <div className="flex-auto">
             <MostPopular />
           </div>
         </div>

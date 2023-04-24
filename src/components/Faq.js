@@ -68,7 +68,7 @@ function SimpleAccordion() {
   return (
     <div id="faq">
       <div className="grid items-center justify-center mt-5 p-7">
-        <h1 className="text-center text-white text-2xl md:text-3xl p-2">
+        <h1 className="text-center text-2xl md:text-3xl p-2">
           Preguntas y respuestas sobre apuestas deportivas
         </h1>
       </div>
@@ -76,16 +76,16 @@ function SimpleAccordion() {
         {items.map((item, index) => (
           <div key={index}>
             <button
-              className="flex justify-between items-center w-full py-4 px-6 bg-black rounded-md shadow-md hover:shadow-lg focus:outline-none border-y-2"
+              className="flex justify-between items-center w-full py-4 px-6 bg-primary rounded-md shadow-md hover:shadow-lg focus:outline-none border-y-2"
               onClick={() =>
                 setSelectedIndex(index === selectedIndex ? null : index)
               }
             >
-              <span className="flex flex-1 text-start font-medium text-sm text-white hover:text-zinc-400">
+              <span className="flex flex-1 text-start font-semibold text-sm hover:text-zinc-400">
                 {item.title}
               </span>
               <svg
-                className={`h-6 w-6 transition-all text-white duration-500 transform ${
+                className={`h-6 w-6 transition-all duration-500 transform ${
                   index === selectedIndex ? "rotate-180" : ""
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ function SimpleAccordion() {
             </button>
 
             {selectedIndex === index && (
-              <div className="px-8 py-4 text-xs md:text-xs bg-black rounded-b-md text-gray-600">
+              <div className="px-8 py-4 text-xs md:text-xs bg-primary rounded-b-md font-light">
                 <p>{item.content}</p>
               </div>
             )}

@@ -39,10 +39,10 @@ function FirstSteps() {
       id="primerospasos"
       className="grid items-center justify-center mt-5 p-7"
     >
-      <h1 className="text-center text-white text-2xl md:text-2xl lg:text-3xl p-2">
+      <h1 className="text-center text-2xl md:text-2xl lg:text-3xl p-2">
         Primeros pasos antes de empezar a apostar
       </h1>
-      <h2 className="text-center text-gray-400 text-xs mt-5">
+      <h2 className="text-center text-xs mt-5 text-gray-500">
         Antes de comenzar a jugar en una casa de apuestas en línea, es
         importante que los usuarios comprendan los términos y condiciones de la
         casa de apuestas y tomen medidas para garantizar que su experiencia de
@@ -53,21 +53,21 @@ function FirstSteps() {
         deportivas y juegos de casino, y se esfuerzan por proporcionar una
         experiencia de juego de alta calidad y segura.
         <br></br>
-        <div className=" font-extrabold mt-2 mb-10">
+        <div className="font-extrabold mt-2 mb-10">
           Recuerda verificar si la casa de apuestas ofrece bonos por primer
           depósito. Revisa los términos y condiciones del bono antes de
           depositar para aprovechar al máximo la promoción. ¡No pierdas la
           oportunidad de obtener más por tu dinero!
         </div>
       </h2>
-      <div className="flex flex-col items-center mx-5 lg:mx-32 p-5 mb-14 border rounded-lg shadow-lg bg-gray-800 shadow-gray-500">
+      <div className="flex flex-col items-center mx-5 lg:mx-32 p-5 mb-14 border rounded-lg shadow-lg bg-primary shadow-gray-500">
         <ol className="flex items-end justify-end w-full mb-4 sm:mb-5 lg:ml-36 text-end p-10">
           {[1, 2, 3, 4].map((step) => (
             <li
               key={step}
               className={`flex w-full items-center ${
                 activeStep === step
-                  ? "text-blue-600 dark:text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-blue-800"
+                  ? "text-white after:content-[''] after:w-full after:h-1 after:border-b after:border-blue-100 after:border-4 after:inline-block dark:after:border-gray-500"
                   : "after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-100 after:border-4 after:inline-block dark:after:border-gray-700"
               } ${step === 4 ? "after:hidden" : ""}`}
               onClick={() => handleStepClick(step)}
@@ -76,8 +76,8 @@ function FirstSteps() {
               <div
                 className={`flex items-center justify-center w-10 h-10 rounded-full lg:h-12 lg:w-12 shrink-0 ${
                   activeStep === step
-                    ? "bg-blue-100 dark:bg-blue-800"
-                    : "bg-gray-100 dark:bg-gray-700"
+                    ? "bg-gray-800 dark:bg-gray-500 border-2"
+                    : "text-white dark:bg-gray-800"
                 }`}
                 style={{ fontSize: "1.2rem", padding: "0.5rem" }}
               >
@@ -86,11 +86,13 @@ function FirstSteps() {
             </li>
           ))}
         </ol>
-        <div className=" text-gray-400 text-sm text-center md:text-justify mb-5">
-          <h2 className="text-lg text-white font-bold mb-3 text-center">
+        <div className="text-sm text-center md:text-justify mb-5">
+          <h2 className="text-lg font-bold mb-3 text-center">
             {steps[activeStep - 1].title}
           </h2>
-          <p>{steps[activeStep - 1].description}</p>
+          <div className="text-gray-500">
+            <p>{steps[activeStep - 1].description}</p>
+          </div>
         </div>
       </div>
       <hr></hr>

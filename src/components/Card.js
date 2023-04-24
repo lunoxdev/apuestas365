@@ -3,7 +3,7 @@ import Modal from "./Modal"; // Importa el componente Modal
 function Card({ sportsbook }) {
   return (
     <div className="max-w-md mx-auto mb-5 ">
-      <div className="divide-y-2 dark:bg-gray-800 rounded-xl overflow-hidden">
+      <div className="divide-y dark:divide-gray-700 bg-primary rounded-xl overflow-hidden">
         <div className="grid p-5 md:p-0 lg:p-0 grid-cols-2 md:grid-cols-1 justify-center items-center md:border-b ">
           <div className="flex justify-center items-center">
             <img
@@ -16,7 +16,7 @@ function Card({ sportsbook }) {
           <div className="flex lg:flex-col justify-center items-center">
             <div className=" grid md:grid-cols-2 lg:grid-cols-2 justify-center items-center mt-2 md:mt-0">
               <div className="ml-1">
-                <h2 className=" text-xl md:text-base lg:text-base text-white font-bold">
+                <h2 className=" text-xl md:text-base lg:text-base font-bold">
                   {sportsbook.name}
                 </h2>
                 <div className="flex mt-3 ">
@@ -36,14 +36,14 @@ function Card({ sportsbook }) {
                 </div>
               </div>
               <div className="mb-5 lg:ml-2">
-                <button className=" rounded-xl text-base lg:text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-32 h-12 lg:w-24 md:mt-5 shadow-gray-600 shadow-sm">
+                <button className=" rounded-xl text-base lg:text-xs font-bold bg-btn text-white hover:opacity-80 w-32 h-10 lg:w-24 md:mt-5 shadow-gray-600 shadow-sm">
                   Registrarse
                 </button>
               </div>
             </div>
           </div>
         </div>
-        <div className="text-xs text-justify p-3 text-gray-300">
+        <div className="text-xs text-justify p-3">
           <p>{sportsbook.description}</p>
           <div className="flex justify-center mt-6 mb-2">
             {sportsbook.app.map((image, index) => (

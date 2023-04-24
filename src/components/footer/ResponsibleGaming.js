@@ -92,12 +92,12 @@ function ModalOpen({ isOpen, onClose }) {
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto">
       <div className="flex items-center bg-gray-800 bg-opacity-70 justify-center min-h-screen">
-        <div className="bg-black mt-28 mb-10 md:mb-0 md:mt-0 lg:mt-28 lg:mb-10 rounded-2xl shadow-black shadow-2xl w-5/6">
+        <div className="bg-primary mt-28 mb-10 md:mb-0 md:mt-0 lg:mt-28 lg:mb-10 rounded-2xl shadow-black shadow-2xl w-5/6">
           <div className="px-8 py-5 text-start">
-            <h2 className="text-xl text-center font-bold text-white mb-5">
+            <h2 className="text-xl text-center font-bold mb-5">
               Juego responsable
             </h2>
-            <div className="text-xs text-justify-last text-gray-400">
+            <div className="text-xs text-justify-last text-gray-500">
               <p>
                 El juego responsable es un enfoque que busca promover prácticas
                 de juego saludables y equilibradas, al mismo tiempo que se
@@ -115,7 +115,7 @@ function ModalOpen({ isOpen, onClose }) {
                 Algunos de los elementos clave del juego responsable incluyen:
               </p>
               <br></br>
-              <ul className="list-disc px-7 text-gray-300 ">
+              <ul className="list-disc px-7">
                 <li>
                   Establecer un presupuesto y límites de tiempo claros para el
                   juego.
@@ -194,7 +194,7 @@ function ModalOpen({ isOpen, onClose }) {
                 <span className="text-base font-bold">Gamblock</span>
               </p>
               <p className="mt-2 mb-3">
-                <span className="text-gray-400">
+                <span className="text-gray-500">
                   Es un software de bloqueo de apuestas en línea diseñado para
                   ayudar a las personas a controlar su comportamiento de juego.
                   Este software funciona bloqueando el acceso a sitios web de
@@ -218,7 +218,7 @@ function ModalOpen({ isOpen, onClose }) {
 
           <div className=" mb-4 px-4 py-2 flex lg:justify-center">
             <button
-              className="px-4 py-2 w-full lg:w-96 bg-gray-700 text-white hover:bg-blue-900 rounded-md"
+              className="font-bold px-4 py-2 w-full lg:w-96 bg-btn hover:opacity-80 rounded-md text-white"
               onClick={onClose}
             >
               Cerrar
@@ -244,7 +244,7 @@ function ResponsibleGaming() {
   return (
     <>
       <button
-        className=" text-xs mt-4 font-bold mb-4 text-white hover:underline hover:text-gray-400"
+        className=" text-xs mt-4 font-bold mb-4 hover:underline hover:text-gray-400"
         onClick={handleOpenModal}
       >
         Juego responsable

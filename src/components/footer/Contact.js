@@ -6,15 +6,12 @@ function ModalOpen({ isOpen, onClose }) {
   return (
     <div className="fixed z-10 inset-0 overflow-y-auto">
       <div className="flex items-center bg-gray-800 bg-opacity-70 justify-center min-h-screen">
-        <div className="bg-black rounded-2xl shadow-black shadow-2xl w-5/6">
+        <div className="bg-primary rounded-2xl shadow-black shadow-2xl w-5/6">
           <div className="px-8 py-5">
-            <h2 className="text-xl text-center font-bold text-white mb-5">
-              Contacto
-            </h2>
-            <div className="text-xs text-center text-gray-400">
-              <div className="text-gray-200">
-                <p>Contáctanos para cualquier duda o consulta.</p>
-              </div>
+            <h2 className="text-xl text-center font-bold mb-5">Contacto</h2>
+            <div className="text-xs text-center text-gray-500">
+              <p>Contáctanos para cualquier duda o consulta.</p>
+
               <br></br>
               <p>
                 En nuestro sitio web, nos esforzamos por brindarte la mejor
@@ -22,16 +19,13 @@ function ModalOpen({ isOpen, onClose }) {
                 Latinoamérica. Si tienes alguna pregunta, comentario o
                 sugerencia sobre nuestro sitio web, no dudes en ponerte en
                 contacto con nosotros a través del siguiente correo electrónico:
-                <span className="font-bold text-white">
-                  test@test.com.
-                </span>{" "}
-                Nuestro equipo estará encantado de ayudarte en todo lo que
-                necesites.
+                <span className="font-bold"> test@test.com.</span> Nuestro
+                equipo estará encantado de ayudarte en todo lo que necesites.
               </p>
             </div>
             <br></br>
             <div className="flex justify-center">
-              <button className="rounded-xl text-xs font-bold bg-zinc-900 text-white hover:bg-blue-900 w-28 h-10 lg:w-24">
+              <button className="rounded-xl text-xs font-bold hover:underline w-28 h-10 lg:w-24">
                 <a href="mailto:lunox.code@gmail.com">Enviar correo</a>
               </button>
             </div>
@@ -39,7 +33,7 @@ function ModalOpen({ isOpen, onClose }) {
 
           <div className=" mb-4 px-4 py-2 flex lg:justify-center">
             <button
-              className="px-4 py-2 w-full lg:w-96 bg-gray-700 text-white hover:bg-blue-900 rounded-md"
+              className="font-bold px-4 py-2 w-full lg:w-96 bg-btn hover:opacity-80 rounded-md text-white"
               onClick={onClose}
             >
               Cerrar
@@ -65,7 +59,7 @@ function Contact({ sportsbook }) {
   return (
     <>
       <button
-        className=" text-xs mt-4 font-bold mb-4 text-white hover:underline hover:text-gray-400"
+        className=" text-xs mt-4 font-bold mb-4 hover:underline hover:text-gray-400"
         onClick={handleOpenModal}
       >
         Contacto

@@ -7,6 +7,16 @@ function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isLanguage, setIsLanguage] = useState(false);
   const [isOn, setIsOn] = useState(false);
+  const [isDarkModeOn, setIsDarkModeOn] = useState(true);
+
+  function toggleDarkMode() {
+    setIsOn(!isOn);
+    setIsDarkModeOn(!isDarkModeOn); // Agregar esta línea para actualizar el estado de isDarkModeOn
+
+    var body = document.querySelector("body");
+    body.classList.toggle("dark");
+    body.classList.toggle("light");
+  }
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5">
@@ -34,48 +44,48 @@ function NavBar() {
         } w-full block flex-grow lg:flex lg:w-auto lg:items-center`}
       >
         <div className="text-sm lg:flex-grow lg:text-center">
-          <a
+          <h2
             href="#inicio"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Inicio
-          </a>
-          <a
+          </h2>
+          <h2
             href="#recomendadas"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Recomendaciones
-          </a>
-          <a
+          </h2>
+          <h2
             href="#primerospasos"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Como comenzar
-          </a>
-          <a
+          </h2>
+          <h2
             href="#consejos"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Consejos
-          </a>
-          <a
+          </h2>
+          <h2
             href="#promociones"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Promociones
-          </a>
-          <a
+          </h2>
+          <h2
             href="#faq"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             FAQ
-          </a>
-          <a
+          </h2>
+          <h2
             href="#nosotros"
-            className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white hover:underline hover:underline-offset-4"
+            className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4"
           >
             Nosotros
-          </a>
+          </h2>
         </div>
         <div className="relative flex justify-between ">
           <button
@@ -129,18 +139,20 @@ function NavBar() {
               </ul>
             </div>
           )}
-          <div
-            onClick={() => setIsOn(!isOn)}
+          <button
+            onClick={toggleDarkMode}
             className={`w-10 h-6 rounded-full mt-5 lg:mt-2 lg:ml-5 ${
-              isOn ? "bg-green-500" : "bg-gray-300"
+              isDarkModeOn ? "bg-green-500" : "bg-gray-300"
             }`}
           >
             <div
               className={`transform transition-transform ease-in-out w-6 h-6 rounded-full ${
-                isOn ? "translate-x-4 bg-white" : "translate-x-0 bg-gray-500"
+                isDarkModeOn
+                  ? "translate-x-4 bg-white"
+                  : "translate-x-0 bg-gray-500"
               }`}
             />
-          </div>
+          </button>
         </div>
       </div>
     </nav>

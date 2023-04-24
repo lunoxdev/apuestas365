@@ -20,22 +20,22 @@ export default function Header() {
         </div>
       </div>
       <div className="flex flex-col justify-center items-center m-5 md:justify-end lg:justify-end">
-        <h2 className="text-center text-lg text-gray-200 lg:text-2xl">
+        <h2 className="text-center text-lg lg:text-2xl">
           Tú sitio web de información de apuestas deportivas en línea en
           Latinoamérica.
         </h2>
-        <p className="text-center text-xs text-gray-500 mt-1">
+        <h2 className="text-center text-xs mt-1 text-gray-500">
           En nuestro sitio, te ofrecemos comparaciones detalladas de las
           principales casas de apuestas deportivas en Latinoamérica, para que
           puedas tomar la mejor decisión al momento de apostar en línea. Nuestro
           objetivo es simplificar tu búsqueda de la casa de apuestas deportivas
           perfecta y asegurarnos de que tomes decisiones informadas en tus
           apuestas deportivas.
-          <div className="text-gray-400 font-extrabold mt-3">
+          <div className="font-extrabold mt-3">
             ¡Confía en nosotros para llevar tu experiencia de apuestas
             deportivas en línea al siguiente nivel!
           </div>
-        </p>
+        </h2>
       </div>
     </div>
   );
