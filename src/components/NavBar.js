@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import es from "../img/language/mexico.png";
 import pt from "../img/language/brasil.png";
 import en from "../img/language/usa.png";
@@ -8,6 +8,20 @@ function NavBar() {
   const [isLanguage, setIsLanguage] = useState(false);
   const [isOn, setIsOn] = useState(false);
   const [isDarkModeOn, setIsDarkModeOn] = useState(true);
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [navRef]);
 
   function toggleDarkMode() {
     setIsOn(!isOn);
@@ -19,7 +33,10 @@ function NavBar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5">
+    <nav
+      ref={navRef}
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between flex-wrap bg-black p-5"
+    >
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <span className="font-semibold text-xl tracking-tight">LOGO</span>
       </div>
@@ -44,48 +61,48 @@ function NavBar() {
         } w-full block flex-grow lg:flex lg:w-auto lg:items-center`}
       >
         <div className="text-sm lg:flex-grow lg:text-center">
-          <h2
+          <a
             href="#inicio"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Inicio
-          </h2>
-          <h2
+          </a>
+          <a
             href="#recomendadas"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Recomendaciones
-          </h2>
-          <h2
+          </a>
+          <a
             href="#primerospasos"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Como comenzar
-          </h2>
-          <h2
+          </a>
+          <a
             href="#consejos"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Consejos
-          </h2>
-          <h2
+          </a>
+          <a
             href="#promociones"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Promociones
-          </h2>
-          <h2
+          </a>
+          <a
             href="#faq"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             FAQ
-          </h2>
-          <h2
+          </a>
+          <a
             href="#nosotros"
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4"
           >
             Nosotros
-          </h2>
+          </a>
         </div>
         <div className="relative flex justify-between ">
           <button

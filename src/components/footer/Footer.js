@@ -43,7 +43,7 @@ export default function Footer(sportsbook) {
             <ResponsibleGaming />
             <Contact />
           </div>
-          &copy; 2023 My Website. All rights reserved.
+          &copy; 2023 Mi Sitio Web. Todos los derechos reservados.
         </div>
       </div>
     </footer>

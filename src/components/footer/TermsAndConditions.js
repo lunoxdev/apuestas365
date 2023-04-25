@@ -192,9 +192,7 @@ function ModalOpen({ isOpen, onClose }) {
               </p>
               <p className="text-gray-500">
                 Por correo electrónico:
-                <span className=" font-extrabold text-white ">
-                  test@test.com
-                </span>
+                <span className=" font-extrabold"> test@test.com</span>
               </p>
             </div>
           </div>
