@@ -5,8 +5,8 @@ import TermsAndConditions from "./TermsAndConditions";
 
 export default function Footer(sportsbook) {
   return (
-    <footer>
-      <div id="nosotros" className="grid items-center justify-center mb-5 p-7">
+    <footer id="nosotros">
+      <div className="grid items-center justify-center mb-5 p-7">
         <h1 className="text-center text-2xl md:text-2xl lg:text-3xl p-2">
           Acerca de nosotros
         </h1>

@@ -63,42 +63,49 @@ function NavBar() {
         <div className="text-sm lg:flex-grow lg:text-center">
           <a
             href="#inicio"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Inicio
           </a>
           <a
             href="#recomendadas"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Recomendaciones
           </a>
           <a
             href="#primerospasos"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Como comenzar
           </a>
           <a
             href="#consejos"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Consejos
           </a>
           <a
             href="#promociones"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             Promociones
           </a>
           <a
             href="#faq"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4 mr-4"
           >
             FAQ
           </a>
           <a
             href="#nosotros"
+            onClick={() => setIsOpen(false)}
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-300 hover:text-white hover:underline hover:underline-offset-4"
           >
             Nosotros
