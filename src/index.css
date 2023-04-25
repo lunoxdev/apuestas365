@@ -62,9 +62,9 @@ body.light {
   color: var(--color-text);
 }
 
-body.light a {
+/* body.light a {
   color: var(--color-text);
-}
+} */
 
 body.light .bg-btn {
   background-color: var(--color-btn);
