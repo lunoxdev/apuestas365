@@ -1,4 +1,6 @@
-# Affiliate project
+# DEPRECATED
 
-## Live demo
-https://deni-tqm.netlify.app/
+## Affiliate project for testing
+
+### Live demo
+https://afiliados.netlify.app/
